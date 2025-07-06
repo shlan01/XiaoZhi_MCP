@@ -33,11 +33,16 @@ MCP-MapNAVI基于模型上下文协议(MCP)，允许AI语言模型与外部地�
 - cozepy>=0.1.0  # 新增：用于Coze API调用
 - yfinance>=0.2.30  # 新增：用于股票数据查询（可选）
 
+##  预先部署（感谢大佬开源，具体配置请看文档）
+- git clone https://github.com/infiniflow/ragflow.git
+- 启动容器： $ docker compose -f docker-compose.yml up -d
+
 ## Installation | 安装指南
 
 1. Clone the repository | 克隆仓库:
+https://github.com/shlan01/XiaoZhi_MCP
 ```bash
-git clone https://github.com/shlan01/XiaoZhi_MCP-master.git
+git clone https://github.com/shlan01/XiaoZhi-MCP.git
 ```
 
 2. Navigate to the project directory | 进入项目目录:
@@ -62,12 +67,7 @@ pip install yfinance
 
 ## Configuration | 配置说明
 
-1. Copy the .env.example file to .env | 复制.env.example文件为.env:
-```bash
-cp .env.example .env
-```
-
-2. 编辑 .env 文件:
+1. 编辑 .env 文件:
 ```bash
 nano .env
 ```

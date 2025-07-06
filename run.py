@@ -74,3 +74,22 @@ for process in processes:
         pass
 
 print("所有进程已终止")
+
+# 示例：检查当前分支并进行相应操作（假设需要）
+import subprocess
+
+def get_current_branch():
+    try:
+        result = subprocess.run(['git', 'rev-parse', '--abbrev-ref', 'HEAD'], capture_output=True, text=True)
+        return result.stdout.strip()
+    except Exception as e:
+        print(f"获取当前分支时出错: {e}")
+        return None
+
+current_branch = get_current_branch()
+if current_branch:
+    print(f"当前分支: {current_branch}")
+    if current_branch == "主要":
+        print("警告：当前分支为'主要'，请切换到其他分支再进行操作。")
+else:
+    print("无法获取当前分支信息。")
